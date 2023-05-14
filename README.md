@@ -31,7 +31,7 @@ To use this app, run the following command:
 
 ## Tests
 To run tests, run the following command on the terminal:
-- `npm run test` (All the test are approved)
+- `npm run test` (All the tests are approved)
 
 <!--![my-team-website](./starter/images/my-team-website.png)-->
 
