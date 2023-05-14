@@ -13,7 +13,6 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
 
-
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 const memberData = [];
 const questions = async () => {
@@ -28,11 +27,13 @@ const questions = async () => {
           type: "input",
           message: "What is the manager's id?",
           name: "id",
+
         },
         {
           type: "input",
           message: "What is the manager's email address?",
           name: "email",
+          validate: "isValidEmail",
         },
         {
          type: "input",
@@ -43,7 +44,7 @@ const questions = async () => {
           type: "list",
           message: "Which type of team member would you like to add?",
           name: "role",
-          choices: ["Engineer", "Intern",],
+          choices: ["Add an Engineer", "Add an Intern",],
         },
       ])
       const newManager = new Manager(
@@ -54,7 +55,7 @@ const questions = async () => {
       );
         memberData.push(newManager);
   
-        if (answers.role === "Engineer") {
+        if (answers.role === "Add an Engineer") {
           const answers = await inquirer
             .prompt([
                 {
@@ -86,8 +87,8 @@ const questions = async () => {
               );
               memberData.push(newEngineer);
             
-          // if intern selected answer these set of questions
-        } else if (answers.role === "Intern") {
+          // if intern selected 
+        } else if (answers.role === "Add an Intern") {
           const internAns = await inquirer
           .prompt([
                 {
@@ -122,3 +123,33 @@ const questions = async () => {
         } 
   
   }; 
+
+  async function promptquestions() {
+    await questions()
+    
+    const nextMember = await inquirer
+      .prompt([
+        {
+          name:'addMember',
+          type: 'list',
+          choices: ['Add another member', 'Finish building the team'],
+          message: "Would you like to add another member?"
+        }
+      ])
+  
+      if (nextMember.addMember === 'Add another member') {
+        return promptquestions()
+      } 
+      return createTeam();
+  }  
+  
+  promptquestions();
+  
+  function createTeam () {
+    console.log("Your Team Summary is ready", memberData)
+    fs.writeFileSync(
+      "./output/index.html",
+      render(memberData),
+      "utf-8"
+    );
+  }
