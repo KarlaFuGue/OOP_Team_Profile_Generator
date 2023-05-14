@@ -33,12 +33,7 @@ To use this app, run the following command:
 To run tests, run the following command on the terminal:
 - `npm run test` (All the tests are approved)
 
-
 https://github.com/KarlaFuGue/OOP_Team_Profile_Generator/assets/125197097/9a1baf4f-c541-42d9-ab93-3b833eb5f236
-
-
-
-<!--![my-team-website](./starter/images/my-team-website.png)-->
 
 ## Technologies
 ![](https://img.shields.io/badge/JavaScript-black?style=flat&logo=javascript&logoWidth=23)
