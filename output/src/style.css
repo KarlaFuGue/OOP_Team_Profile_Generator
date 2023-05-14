@@ -1,9 +1,10 @@
 .team-heading {
     background-color: #2E038C;
     color: #ffffff;
-   font-size: 18px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
   }
-  
   .team-area {
     max-width: 1000px;
     margin: 3em auto;
