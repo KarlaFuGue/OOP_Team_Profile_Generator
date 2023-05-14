@@ -33,7 +33,6 @@ const questions = async () => {
           type: "input",
           message: "What is the manager's email address?",
           name: "email",
-          validate: "isValidEmail",
         },
         {
          type: "input",
@@ -61,22 +60,22 @@ const questions = async () => {
                 {
                 type: "input",
                 message: "What is the engineer's name?",
-                name: "engineerName",
+                name: "name",
                 },
                 {
                 type: "input",
                 message: "What is the engineer's id?",
-                name: "engineerID",
+                name: "id",
                 },
                 {
                 type: "input",
                 message: "What is the engineer's email address?",
-                name: "engineerEmailAddress",
+                name: "email",
                 },
                 {
                 type: "input",
                 message: "What is the engineer's GitHub username?",
-                name: "engineerGithubUsername",
+                name: "github",
                 },
             ])
               const newEngineer = new Engineer(
@@ -94,22 +93,22 @@ const questions = async () => {
                 {
                 type: "input",
                 message: "What is the intern's name?",
-                name: "internName",
+                name: "name",
                 },
                 {
                 type: "input",
                 message: "What is the intern's id?:",
-                name: "internID",
+                name: "id",
                 },
                 {
                 type: "input",
                 message: "What is the intern's email address?",
-                name: "internEmailAddress",
+                name: "email",
                 },
                 {
                 type: "input",
                 message: "What is the intern's school name?",
-                name: "internSchool",
+                name: "school",
                 },
             ])
             
