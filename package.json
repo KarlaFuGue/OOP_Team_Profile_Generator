@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "inquirer": "^8.2.5"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "name": "oop_team_profile_generator",
+  "description": "This application will take in information about employees on a software engineering team, then generate an HTML webpage that displays summaries for each person.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarlaFuGue/OOP_Team_Profile_Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KarlaFuGue/OOP_Team_Profile_Generator/issues"
+  },
+  "homepage": "https://github.com/KarlaFuGue/OOP_Team_Profile_Generator#readme"
+}
